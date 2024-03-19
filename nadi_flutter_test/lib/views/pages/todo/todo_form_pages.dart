@@ -46,6 +46,11 @@ class _TodoFormPageState extends State<TodoFormPage> {
       _statusController.text = widget.todoDataUpdate!.status;
       _dueDateController.text = widget.todoDataUpdate!.dueDate;
     }
+        if (widget.title != 'Update') {
+
+      _statusController.text = 'On Going';
+
+    }
     super.initState();
   }
 
@@ -206,7 +211,7 @@ class _TodoFormPageState extends State<TodoFormPage> {
                             )
                           ],
                           alignment: Alignment.bottomCenter,
-                          value: _statusController.value.text,
+                          value: _statusController.value.text  ,
                           // value: 'On Going',
                           onChanged: (value) {
                             if (value != null) {
